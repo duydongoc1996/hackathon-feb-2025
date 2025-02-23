@@ -5,8 +5,43 @@
     {
       "idx": 0,
       "version": "7",
-      "when": 1739944304916,
-      "tag": "0000_brave_mac_gargan",
+      "when": 1740207347897,
+      "tag": "0000_classy_apocalypse",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1740207393491,
+      "tag": "0001_simple_prodigy",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1740213282165,
+      "tag": "0002_clean_ma_gnuci",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1740291328588,
+      "tag": "0003_tidy_squadron_supreme",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1740291345842,
+      "tag": "0004_wild_silver_surfer",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1740296175611,
+      "tag": "0005_square_tarantula",
       "breakpoints": true
     }
   ]

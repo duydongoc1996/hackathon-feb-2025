@@ -6,6 +6,9 @@ import { WinstonLoggerService } from './logger/logger.service';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, {
     bufferLogs: true,
+    cors: {
+      origin: '*',
+    },
   });
 
   // Config
@@ -16,7 +19,7 @@ async function bootstrap() {
   app.useLogger(logger); // Use custom logger
 
   // Listen
-  const port = configService.get('PORT');
+  const port = configService.get<string>('PORT');
   await app.listen(port ?? 4000);
 }
 bootstrap();

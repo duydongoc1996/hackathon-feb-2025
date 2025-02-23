@@ -1,16 +1,19 @@
-import { posts, postsRelations } from './post';
 import { quests, questsRelations } from './quest';
 import { users, usersRelations } from './user';
+import { userQuests, userQuestsRelations } from './user-quest';
+import { wallets, walletsRelations } from './wallet';
 
 const tables = {
   users,
-  posts,
+  wallets,
   quests,
+  userQuests,
 };
 const relations = {
   usersRelations,
-  postsRelations,
+  walletsRelations,
   questsRelations,
+  userQuestsRelations,
 };
 
 const schemas = {

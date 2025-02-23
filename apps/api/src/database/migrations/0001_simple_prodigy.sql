@@ -1,0 +1,1 @@
+ALTER TABLE "wallets" RENAME COLUMN "title" TO "address";

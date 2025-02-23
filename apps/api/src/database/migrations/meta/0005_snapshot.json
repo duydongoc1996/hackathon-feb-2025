@@ -1,6 +1,6 @@
 {
-  "id": "7e547f5f-0e74-4035-90bf-839e11901c67",
-  "prevId": "00000000-0000-0000-0000-000000000000",
+  "id": "32dcd39b-f44b-4163-9f2f-64afb4b62896",
+  "prevId": "9c154c40-bb90-4b50-a755-0cba1da64b41",
   "version": "7",
   "dialect": "postgresql",
   "tables": {
@@ -14,7 +14,7 @@
           "primaryKey": true,
           "notNull": true,
           "identity": {
-            "type": "always",
+            "type": "byDefault",
             "name": "quests_id_seq",
             "schema": "public",
             "increment": "1",
@@ -59,9 +59,10 @@
         },
         "rewards": {
           "name": "rewards",
-          "type": "text",
+          "type": "json",
           "primaryKey": false,
-          "notNull": false
+          "notNull": false,
+          "default": "'{}'::json"
         }
       },
       "indexes": {},
@@ -93,8 +94,8 @@
             "cycle": false
           }
         },
-        "title": {
-          "name": "title",
+        "status": {
+          "name": "status",
           "type": "varchar(255)",
           "primaryKey": false,
           "notNull": true
@@ -232,8 +233,8 @@
             "cycle": false
           }
         },
-        "title": {
-          "name": "title",
+        "address": {
+          "name": "address",
           "type": "varchar(255)",
           "primaryKey": false,
           "notNull": true

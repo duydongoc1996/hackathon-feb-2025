@@ -1,6 +1,6 @@
 {
-  "id": "7e547f5f-0e74-4035-90bf-839e11901c67",
-  "prevId": "00000000-0000-0000-0000-000000000000",
+  "id": "3e5a4a9b-13ec-4001-8288-baabacb2ec81",
+  "prevId": "fa571bde-845b-4fb6-9524-7fa060b7d0ea",
   "version": "7",
   "dialect": "postgresql",
   "tables": {
@@ -56,12 +56,6 @@
           "primaryKey": false,
           "notNull": false,
           "default": "'{}'::json"
-        },
-        "rewards": {
-          "name": "rewards",
-          "type": "text",
-          "primaryKey": false,
-          "notNull": false
         }
       },
       "indexes": {},
@@ -93,8 +87,8 @@
             "cycle": false
           }
         },
-        "title": {
-          "name": "title",
+        "status": {
+          "name": "status",
           "type": "varchar(255)",
           "primaryKey": false,
           "notNull": true
@@ -232,8 +226,8 @@
             "cycle": false
           }
         },
-        "title": {
-          "name": "title",
+        "address": {
+          "name": "address",
           "type": "varchar(255)",
           "primaryKey": false,
           "notNull": true

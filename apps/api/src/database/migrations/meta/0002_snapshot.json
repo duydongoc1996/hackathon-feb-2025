@@ -1,6 +1,6 @@
 {
-  "id": "7e547f5f-0e74-4035-90bf-839e11901c67",
-  "prevId": "00000000-0000-0000-0000-000000000000",
+  "id": "fa571bde-845b-4fb6-9524-7fa060b7d0ea",
+  "prevId": "fbf7bcf0-86ff-4e5b-bd5a-954cca96e951",
   "version": "7",
   "dialect": "postgresql",
   "tables": {
@@ -93,8 +93,8 @@
             "cycle": false
           }
         },
-        "title": {
-          "name": "title",
+        "status": {
+          "name": "status",
           "type": "varchar(255)",
           "primaryKey": false,
           "notNull": true
@@ -232,8 +232,8 @@
             "cycle": false
           }
         },
-        "title": {
-          "name": "title",
+        "address": {
+          "name": "address",
           "type": "varchar(255)",
           "primaryKey": false,
           "notNull": true

@@ -1,7 +1,7 @@
 import { relations } from 'drizzle-orm';
 import { integer, pgEnum, pgTable, varchar } from 'drizzle-orm/pg-core';
 import { UserStatus } from '../../common/enum';
-import { posts } from './post';
+import { TWallet, wallets } from './wallet';
 
 export const userStatus = pgEnum('status', [
   UserStatus.ACTIVE,
@@ -17,9 +17,11 @@ export const users = pgTable('users', {
 });
 
 export const usersRelations = relations(users, ({ many }) => ({
-  posts: many(posts),
+  wallets: many(wallets),
 }));
 
-export type TUser = typeof users.$inferInsert;
-export type TSelectUser = typeof users.$inferSelect;
-export type TUpdateUser = Partial<TUser>;
+export type TUser = typeof users.$inferSelect & {
+  wallets?: TWallet[];
+};
+export type TInsertUser = typeof users.$inferInsert;
+export type TUpdateUser = Partial<TInsertUser>;
