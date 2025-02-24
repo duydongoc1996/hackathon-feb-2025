@@ -77,10 +77,7 @@ export class QuestsService {
           },
         },
       },
-      where: and(
-        eq(userQuests.userId, userId),
-        eq(userQuests.status, UserQuestStatus.COMPLETED),
-      ),
+      where: and(eq(userQuests.userId, userId)),
     });
 
     return this.questValidator.validate({

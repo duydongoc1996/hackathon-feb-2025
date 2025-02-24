@@ -1,5 +1,5 @@
 import { Inject, Injectable } from '@nestjs/common';
-import { eq } from 'drizzle-orm';
+import { asc, eq } from 'drizzle-orm';
 import { DataSource, type DB } from 'src/database/database.service';
 import {
   type TInsertUserQuest,
@@ -14,7 +14,9 @@ export class UserQuestsService {
   }
 
   async find() {
-    return this.db.query.userQuests.findMany();
+    return this.db.query.userQuests.findMany({
+      orderBy: asc(userQuests.id),
+    });
   }
 
   async findOne(id: number) {

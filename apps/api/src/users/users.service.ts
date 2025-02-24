@@ -1,5 +1,5 @@
 import { Inject, Injectable } from '@nestjs/common';
-import { eq } from 'drizzle-orm';
+import { asc, eq } from 'drizzle-orm';
 import { DataSource, type DB } from 'src/database/database.service';
 import {
   TUpdateUser,
@@ -14,7 +14,10 @@ export class UsersService {
   }
 
   async find() {
-    return this.db.query.users.findMany({ with: { wallets: true } });
+    return this.db.query.users.findMany({
+      with: { wallets: true },
+      orderBy: asc(users.id),
+    });
   }
 
   async findOne(id: number) {
